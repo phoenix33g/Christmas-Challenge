@@ -9,6 +9,7 @@ quit = True
 folder_path = "D:/_SCRIPTING/_ScriptProjects/25DaysTillChristmas-GITHUB/Day_01/"
 text_file = open(folder_path + "input.txt", "r")
 frequencys = text_file.read().split('\n')
+text_file.close()
 
 #While loop to find value
 while quit:
@@ -25,13 +26,6 @@ while quit:
     if count_val != 1:
         output = stepArr[-1]
         quit = False
-    #for a in stepArr:
-    #    count_val = stepArr.count(a)
-    #    if count_val != 1:
-    #        output = a
-    #        quit = False
-    #        break
-    #print('PASS')
     i += 1
 
 #Print value

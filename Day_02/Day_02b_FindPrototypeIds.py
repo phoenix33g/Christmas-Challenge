@@ -8,6 +8,7 @@ ids_list = []
 folder_path = "D:/_SCRIPTING/_ScriptProjects/25DaysTillChristmas-GITHUB/Day_02/"
 text_file = open(folder_path + "input.txt", "r")
 box_ids = text_file.read().split('\n')
+text_file.close()
 
 #Iterate through list
 for i in range(len(box_ids)-1):
@@ -23,7 +24,7 @@ for i in range(len(box_ids)-1):
             if box_id[x] != test_id[x]:
                 test_value += 1
             else:
-                temp_id = temp_id + box_id[x]
+                temp_id += box_id[x]
         #Find and append ids with specified characteristics to ids_list
         if test_value == 1: ids_list.append(temp_id)
 

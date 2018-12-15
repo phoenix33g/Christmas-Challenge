@@ -5,6 +5,7 @@ frequency = 0
 folder_path = "D:/_SCRIPTING/_ScriptProjects/25DaysTillChristmas-GITHUB/Day_01/"
 text_file = open(folder_path + "input.txt", "r")
 frequencys = text_file.read().split('\n')
+text_file.close()
 
 #Iterate across array
 for freq in frequencys:

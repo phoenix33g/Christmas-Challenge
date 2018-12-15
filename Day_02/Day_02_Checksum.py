@@ -9,6 +9,7 @@ value_list = [0,0]
 folder_path = "D:/_SCRIPTING/_ScriptProjects/25DaysTillChristmas-GITHUB/Day_02/"
 text_file = open(folder_path + "input.txt", "r")
 box_ids = text_file.read().split('\n')
+text_file.close()
 
 #Iterate through list
 for box_id in box_ids:
