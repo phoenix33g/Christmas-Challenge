@@ -5,6 +5,7 @@ import numpy as np
 #Variables
 claims_list =[]
 max_area = [9999,9999,0,0] #[left, top, right, bottom]
+value = 0
 
 #Create list from input.txt file
 folder_path = "D:/_SCRIPTING/_ScriptProjects/25DaysTillChristmas-GITHUB/Day_03/"
@@ -39,7 +40,16 @@ area_array = np.zeros( (max_area[3], max_area[2]) )
 
 #Fill area array with claims
 for claim in claims_list:
+    height_start = claim.get('location')[1]
+    height_end = claim.get('location')[1] + claim.get('size')[1]
+    width_start = claim.get('location')[0]
+    width_end = claim.get('location')[0] + claim.get('size')[0]
+    area_array[height_start:height_end ,width_start:width_end] += 1
 
+#Find values in area_aray that are greater than 1
+for temp_array in area_array:
+    for i in temp_array:
+        if i > 1: value += 1
 
 #Print out value
-p.pprint(area_array)
+p.pprint(value)
