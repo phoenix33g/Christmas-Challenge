@@ -45,8 +45,10 @@ while destruction:
             else:
                 temp_str += str_1
                 temp_str_2 = str_2
+    #if count > 0 and count < 10: print("---" + value[len(value)-20:len(value)] + "---")
     value = temp_str + end_str
 
 #Print out value
-print("amount in original list: " + str(len(input_str)))
-print("amount in new list: " + str(len(value)))
+#p.pprint(value)
+print("amount in og: " + str(len(input_str)))
+print("amount in new: " + str(len(value)))
